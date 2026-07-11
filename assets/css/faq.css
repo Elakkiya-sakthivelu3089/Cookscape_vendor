@@ -1,0 +1,127 @@
+/* CookScape */
+
+/*** 
+
+====================================================================
+	Faq One
+====================================================================
+
+***/
+
+.faq-one{
+	position:relative;
+	padding: 110px 0px 80px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.faq-one_images-column{
+	position:relative;
+	margin-bottom: 30px;
+}
+
+.faq-one_image-outer{
+	position:relative;
+	padding-bottom: 100px;
+}
+
+.faq-one_image{
+	position:relative;
+	display: inline-block;
+}
+
+.faq-one_image img{
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+
+.faq-one_video-outer{
+	position:absolute;
+	left:40px;
+	bottom: 0px;
+	z-index:1;
+}
+
+.faq-one_video{
+	position:relative;
+	display: inline-block;
+	background-size: cover;
+	clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.faq-one_video a{
+	position:relative;
+	width: 300px;
+	height: 310px;
+	line-height: 310px;
+	text-align: center;
+	display: inline-block;
+	background-size: cover;
+}
+
+.faq-one_video a:before{
+	position:absolute;
+	content:'';
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	opacity: 0.70;
+	background-color: var(--color-two);
+}
+
+.faq-one_video-outer:after{
+	position:absolute;
+	content:'';
+	z-index:-1;
+	left: 10px;
+    top: -5px;
+    right: -15px;
+    bottom: -5px;
+	background-color: var(--main-color);
+	clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+.faq-one_video a span{
+	position:relative;
+	font-size: 44px;
+	margin-left: -70px;
+	display: inline-block;
+	color: var(--white-color);
+	font-family: "flaticon_interior";
+}
+
+.faq-one_triangle{
+	position:absolute;
+	right:250px;
+	bottom:0px;
+	width: 90px;
+	height: 100px;
+	opacity:0.10;
+	background-color: var(--color-two);
+	clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+.faq-one_content-column{
+	position:relative;
+	margin-bottom: 30px;
+}
+
+/*** 
+
+====================================================================
+	Faq Two
+====================================================================
+
+***/
+
+.faq-two{
+	position:relative;
+	padding: 110px 0px 80px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+.faq-two .column{
+	position:relative;
+	margin-bottom: 30px;
+}

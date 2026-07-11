@@ -1,0 +1,335 @@
+/* CookScape */
+
+/*** 
+
+====================================================================
+	Testimonial One
+====================================================================
+
+***/
+
+.testimonial-one{
+	position:relative;
+	overflow: hidden;
+	padding: 110px 0px 110px;
+}
+
+.testimonial-one.style-two{
+	padding-top:0px;
+}
+
+.testimonial-one .swiper-pagination-progressbar{
+	position: relative;
+	bottom: 15px;
+    top: auto !important;
+	margin: 0 auto;
+    width: 200px !important;
+    left: auto !important;
+	background-color: #dddddd;
+}
+
+.testimonial-one .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+	background-color: var(--main-color);
+}
+
+.testimonial-one .testimonial-one-arrow{
+	position:relative;
+	width: 350px;
+	z-index: 1;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.testimonial-one .testimonial-one-arrow .testimonial-swiper-prev{
+	position:relative;
+	font-size: 16px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	display: inline-block;
+	text-transform: uppercase;
+	color: var(--color-two);
+}
+
+.testimonial-one .testimonial-one-arrow .testimonial-swiper-next{
+	position:absolute;
+	right:0px;
+	bottom: 0px;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	display: inline-block;
+	text-transform: uppercase;
+	color: var(--color-two);
+}
+
+.testimonial-one .testimonial-one-arrow .testimonial-swiper-prev:hover,
+.testimonial-one .testimonial-one-arrow .testimonial-swiper-next:hover{
+	color: var(--main-color);
+}
+
+.testimonial-one .testimonial-swiper {
+    max-width: 660px;
+	margin:0 auto;
+    overflow: visible;
+}
+
+.testimonial-one .sec-title{
+	max-width: 750px;
+	margin:0 auto;
+	margin-bottom: 40px;
+}
+
+.testimonial-block_one {
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.testimonial-block_one-inner {
+	position: relative;
+	padding: 40px 0px 35px;
+	
+}
+
+.testimonial-block_one-inner:before {
+	position: absolute;
+	content: "";
+	left: 80px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0.80;
+	background-color:#f5f5f5;
+}
+
+.testimonial-block_one-content{
+	position: relative;
+	padding-left: 150px;
+	padding-right: 20px;
+}
+
+.testimonial-block_one-author{
+	position: absolute;
+	left: 10px;
+	top: 20px;
+}
+
+.testimonial-block_one-author img{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	display: inline-block;
+}
+
+.testimonial-block_one-author .quote{
+	position: absolute;
+	left: 50%;
+	bottom: -32px;
+	width: 60px;
+	height: 60px;
+	font-size: 28px;
+	line-height: 60px;
+	text-align: center;
+	display: inline-block;
+	transform: translateX(-50%);
+	color: var(--white-color);
+	background-color: var(--main-color);
+	font-family: "flaticon_interior";
+}
+
+.testimonial-block_one-text{
+	position: relative;
+	font-size: 18px;
+	line-height: 32px;
+	margin-bottom: 18px;
+	color: var(--color-two);
+}
+
+.testimonial-block_one-designation{
+	position: relative;
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--color-two);
+}
+
+.testimonial-block_one-designation span{
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	margin-top: 5px;
+	color: var(--color-three);
+}
+
+/*** 
+
+====================================================================
+	Testimonial Two
+====================================================================
+
+***/
+
+.testimonial-two{
+	position:relative;
+	overflow: hidden;
+	padding: 110px 0px 200px;
+	background-color:#eeeeee;
+	background-position: center bottom;
+	background-repeat: repeat-x;
+}
+
+.testimonial-two .swiper-pagination-progressbar{
+	position: relative;
+	bottom: 14px;
+    top: auto !important;
+	margin: 0 auto;
+    width: 200px !important;
+    left: auto !important;
+	background-color: var(--color-two);
+}
+
+.testimonial-two .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+	background-color: var(--main-color);
+}
+
+.testimonial-two .testimonial-two-arrow{
+	position:relative;
+	width: 350px;
+	z-index: 1;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.testimonial-two .testimonial-two-arrow .three-item_carousel-prev{
+	position:relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: 500;
+	display: inline-block;
+	text-transform: uppercase;
+	color: var(--color-two);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.testimonial-two .testimonial-two-arrow .three-item_carousel-next{
+	position:absolute;
+	right:0px;
+	bottom: 0px;
+	font-size: 18px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	display: inline-block;
+	text-transform: uppercase;
+	color: var(--color-two);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.testimonial-two .testimonial-two-arrow .three-item_carousel-prev:hover,
+.testimonial-two .testimonial-two-arrow .three-item_carousel-next:hover{
+	color: var(--main-color);
+}
+
+.testimonial-two .sec-title_heading{
+	max-width: 550px;
+	margin:0 auto;
+	margin-top: 20px;
+}
+
+.testimonial-block_two {
+	position: relative;
+	z-index:1;
+	margin-bottom: 30px;
+}
+
+.testimonial-block_two-inner {
+	position: relative;
+	text-align:center;
+	padding: 40px 50px 0px;
+}
+
+.testimonial-block_two-inner:before {
+	position: absolute;
+	content: "";
+	left: 15px;
+	top: 0px;
+	right: 15px;
+	bottom: 45px;
+	background-color: var(--white-color);
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.10);
+}
+
+.testimonial-block_two-inner:after{
+	position: absolute;
+	content: "";
+	left: 0px;
+	top: 30px;
+	right: 0px;
+	bottom: 75px;
+	z-index:-1;
+	background-color: var(--main-color);
+	transition:all 300ms ease;
+	-moz-transition:all 300ms ease;
+	-webkit-transition:all 300ms ease;
+	-ms-transition:all 300ms ease;
+	-o-transition:all 300ms ease;
+}
+
+.testimonial-block_two-inner:hover::after{
+	background-color: var(--color-two);
+}
+
+.testimonial-block_two-author{
+	position: relative;
+	width: 90px;
+	height: 90px;
+	margin:0 auto;
+}
+
+.testimonial-block_two-text{
+	position: relative;
+	font-size: 18px;
+	line-height: 32px;
+	margin-bottom: 25px;
+	color: var(--color-two);
+}
+
+.testimonial-block_two-designation{
+	position: relative;
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--color-two);
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.testimonial-block_two-designation span{
+	display: block;
+	font-weight: 400;
+	font-size: 18px;
+	margin-top: 10px;
+	color: var(--main-color);
+	text-transform: capitalize;
+}
+
+.testimonial-block_two-rating{
+	position:relative;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	color: var(--main-color);
+}
+
+/*** 
+
+====================================================================
+	Testimonial Three
+====================================================================
+
+***/
+
+.testimonial-three{
+	position:relative;
+	padding: 110px 0px 110px;
+	background-position: center bottom;
+	background-repeat: repeat-x;
+}

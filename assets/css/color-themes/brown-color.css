@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+:root {
+	
+	/* #ab8b40 in decimal RGB */
+	--main-color: rgb(171,139,64);
+	--main-color-rgb: 171,139,64;
+}
+
+.page-title .pattern-1,
+.page-title .pattern-2,
+.error-one_image,
+.project-four_bg,
+.slider-three_pattern,
+.choose-one_shadow{
+	filter: grayscale(100%);
+}

@@ -1,0 +1,63 @@
+/* CookScape */
+
+/*** 
+
+====================================================================
+	Process One
+====================================================================
+
+***/
+
+.process-one{
+	position:relative;
+	overflow: hidden;
+	padding: 110px 0px 80px;
+}
+
+.process-one_image{
+	position:relative;
+	overflow: hidden;
+	border-radius: 15px;
+	margin-bottom: 30px;
+}
+
+.process-one_image img{
+	position:relative;
+	width:100%;
+}
+
+.process-one .bold-text{
+	position:relative;
+	font-size: 24px;
+	line-height: 34px;
+	font-weight: 600;
+	margin-bottom: 30px;
+	color: var(--color-two);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.process-one .default-skills{
+	margin-top: 20px;
+	margin-bottom: 25px;
+}
+
+.process-one_list{
+	position:relative;
+}
+
+.process-one_list li{
+	position:relative;
+	font-size: 16px;
+	padding-left: 25px;
+	margin-bottom: 15px;
+	color: var(--color-two);
+}
+
+.process-one_list li:before{
+	position:absolute;
+	content: "\f12c";
+	left:0px;
+	top:0px;
+	color: var(--main-color);
+	font-family: "flaticon_interior";
+}

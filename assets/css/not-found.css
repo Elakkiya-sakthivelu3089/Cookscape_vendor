@@ -1,0 +1,41 @@
+/* CookScape */
+
+/*** 
+
+====================================================================
+	Error Section
+====================================================================
+
+***/
+
+.error-section{
+	position:relative;
+	text-align:center;
+	padding:100px 0px 100px;
+}
+
+.error-section .content{
+	position:relative;
+}
+
+.error-section h1{
+	line-height:1em;
+	font-size:340px;
+	font-weight:800;
+	color:rgba(var(--black-color-rgb), 0.15);
+}
+
+.error-section h2{
+	margin-top:15px;
+}
+
+.error-section .text{
+	line-height:1.8em;
+	font-size:18px;
+	color:var(--color-five);
+	margin-top:25px;
+}
+
+.error-section .button-box{
+	margin-top:30px;
+}

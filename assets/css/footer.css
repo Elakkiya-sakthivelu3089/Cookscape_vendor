@@ -1,0 +1,479 @@
+/* Constrc Construction */
+
+/*** 
+
+====================================================================
+	Main Footer
+====================================================================
+
+***/
+
+.main-footer{
+	position:relative;
+	overflow:hidden;
+	background-color: var(--color-two);
+}
+
+.main-footer.alternate .widgets-section{
+	padding-top: 200px;
+	padding-bottom: 100px;
+}
+
+.main-footer .widgets-section{
+	position:relative;
+	padding: 100px 0px 60px;
+}
+
+.main-footer .footer_pattern{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-position: left bottom;
+	background-repeat: no-repeat;
+}
+
+.main-footer .inner-container{
+	position:relative;
+}
+
+.footer-logo{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.footer-text{
+	position: relative;
+	line-height: 28px;
+	font-size: 16px;
+	margin-bottom: 30px;
+	color: var(--white-color);
+}
+
+.footer-social_box{
+	position: relative;
+}
+
+.footer-social_box strong{
+	position: relative;
+	display: block;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	color: var(--main-color);
+}
+
+.footer-social_box a{
+	position: relative;
+	width: 42px;
+	height: 42px;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	color: var(--white-color);
+	margin-right: var(--margin-right-5);
+	border: 1px solid var(--white-color);
+	font-family: 'Font Awesome 5 Brands';
+}
+
+.footer-social_box a:hover{
+	color: var(--color-two);
+	background-color: var(--white-color);
+}
+
+.footer-title{
+	position: relative;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: var(--main-color);
+	text-transform: uppercase;
+}
+
+.footer-column{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.footer-list{
+	position: relative;
+}
+
+.footer-list li{
+	position: relative;
+	margin-bottom: 15px;
+
+}
+
+.footer-list li:last-child{
+	margin-bottom: 0px;
+}
+
+.footer-list li a{
+	position: relative;
+	font-size:16px;
+	color: var(--white-color);
+	transition:all 300ms ease;
+	-moz-transition:all 300ms ease;
+	-webkit-transition:all 300ms ease;
+	-ms-transition:all 300ms ease;
+	-o-transition:all 300ms ease;
+}
+
+.footer-list li a::before{
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 7px;
+	opacity: 0;
+	width : 30px;
+	height: 8px;
+	background:url(../images/icons/arrow.png) no-repeat;
+	transition:all 300ms ease;
+	-moz-transition:all 300ms ease;
+	-webkit-transition:all 300ms ease;
+	-ms-transition:all 300ms ease;
+	-o-transition:all 300ms ease;
+}
+
+.footer-list li a:hover::before{
+	opacity: 1;
+}
+
+.footer-list li a:hover{
+	color: var(--main-color);
+	padding-left: 35px;
+}
+
+/* News Widget */
+
+.news-widget-block{
+	position: relative;
+	min-height: 70px;
+	padding-left: 85px;
+	margin-bottom: 25px;
+}
+
+.news-widget_image{
+	position: absolute;
+	left: 0px;
+	top: 2px;
+	width: 70px;
+	overflow: hidden;
+}
+
+.news-widget_title{
+	position: relative;
+	font-weight: 600;
+}
+
+.news-widget_title a{
+	position: relative;
+	color: #ffffff;
+}
+
+.news-widget_post-date{
+	position: relative;
+	font-weight: 400;
+	font-size: 14px;
+	color: #ffffff;
+	margin-bottom: 5px;
+}
+
+.news-widget-block:last-child{
+	margin-bottom: 0px;
+}
+
+.news-widget_title a:hover{
+	color: var(--main-color);
+}
+
+.footer-bottom{
+	position:relative;
+	padding: 25px 0px;
+	background-color: #0c0d14;
+}
+
+.main-footer_copyright{
+	position: relative;
+	font-size: 16px;
+	color: var(--white-color);
+}
+
+.footer-bottom .d-flex{
+	gap: 15px;
+}
+
+.footer-bottom_navs{
+	position:relative;
+}
+
+.footer-bottom_navs li{
+	position:relative;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.footer-bottom_navs li a{
+	position:relative;
+	font-size: 16px;
+	color: var(--white-color);
+}
+
+.footer-bottom_navs li a:hover{
+	color: var(--main-color);
+}
+
+/* Gallery Box */
+
+.main-footer .gallery-box{
+	position:relative;
+	padding-bottom: 70px;
+}
+
+.instagram-block_one {
+	position: relative;
+	margin: 0px 5px;
+}
+
+.instagram-block_one-inner{
+	position: relative;
+}
+
+.instagram-block_one-image{
+	position: relative;
+}
+
+.instagram-block_one-image img{
+	position: relative;
+	width: 100%;
+	display: block;
+}
+
+.instagram-block_one-overlay{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: -webkit-transform 0.4s ease;
+	transition: transform 0.4s ease;
+	transition: transform 0.4s ease,-webkit-transform 0.4s ease;
+	-webkit-transform: scale(0, 1);
+	-ms-transform: scale(0, 1);
+	transform: scale(0, 1);
+	-webkit-transform-origin: right center;
+	-ms-transform-origin: right center;
+	transform-origin: right center;
+}
+
+.instagram-block_one-overlay:before{
+	position: absolute;
+	content:'';
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	opacity:0.75;
+    background-color: var(--main-color);
+}
+
+.instagram-block_one-inner:hover .instagram-block_one-overlay{
+	-webkit-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	transform: scale(1, 1);
+	-webkit-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+}
+
+.instagram-block_one-icon{
+	position: relative;
+	font-size: 40px;
+	color: var(--white-color);
+}
+
+
+.twitter-block{
+	position:relative;
+}
+
+.twitter-block .image{
+	position:relative;
+	margin-bottom:25px;
+	display:inline-block;
+}
+
+.twitter-block h6{
+	position:relative;
+	font-weight: 600;
+	color: var(--white-color);
+}
+
+.twitter-block .tags{
+	position:relative;
+	font-size: 18px;
+	margin-top: 10px;
+	color: var(--main-color);
+}
+
+.footer-info_block{
+	position:relative;
+	margin-bottom: 30px;
+}
+
+.footer-info_block .inner{
+	position:relative;
+	font-size: 18px;
+	padding: 30px 30px;
+	color:var(--white-color);
+	background-color: #0c0d14;
+	text-transform:capitalize;
+}
+
+.footer-info_block .content{
+	position:relative;
+	padding-left: 60px;
+}
+
+.footer-info_block .icon{
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-size: 40px;
+	line-height:1em;
+	color:var(--main-color);
+	font-family: "flaticon_qonstruct";
+}
+
+.footer-info_block strong{
+	position:relative;
+	display: block;
+	font-size: 20px;
+	font-weight: 600;
+	margin-top: 10px;
+	color:var(--white-color);
+}
+
+
+
+.footer-two_location{
+	position:relative;
+	padding-left: 35px;
+	margin-bottom: 20px;
+	color: var(--white-color);
+}
+
+.footer-two_location .icon{
+	position:absolute;
+	left:0px;
+	top:2px;
+	line-height:1em;
+	font-size: 25px;
+	color: var(--main-color);
+	font-family: "flaticon_interior";
+}
+
+.footer-two_location strong{
+	position:relative;
+	display: block;
+	font-weight: 500;
+	font-size: 18px;
+	margin-top: 7px;
+}
+
+.footer-two_phone{
+	position:relative;
+	font-size: 22px;
+	font-weight: 600;
+	padding-left: 50px;
+	margin-bottom: 20px;
+	color: var(--main-color);
+}
+
+.footer-two_phone .icon{
+	position:absolute;
+	left:0px;
+	top:0px;
+	line-height:1em;
+	font-size: 30px;
+	font-weight: 400;
+	font-family: "flaticon_interior";
+}
+
+.footer-two_phone:hover{
+	color: var(--white-color);
+}
+
+.footer-contact_list{
+	position:relative;
+	margin-bottom: 30px;
+}
+
+.footer-contact_list li{
+	position:relative;
+	font-size: 20px;
+	line-height: 30px;
+	padding-left: 45px;
+	margin-bottom: 15px;
+	color: var(--white-color);
+	text-transform: capitalize;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.footer-contact_list li .icon{
+	position:absolute;
+	left:0px;
+	top:8px;
+	font-size: 30px;
+	line-height:1em;
+	color: var(--main-color);
+	font-family: "flaticon_interior";
+}
+
+.footer-contact_list li a{
+	position:relative;
+	display: block;
+	color: var(--white-color);
+}
+
+.footer-contact_list li a:hover{
+	color: var(--main-color);
+}
+
+.footer-contact_list li:last-child{
+	margin-bottom: 0px;
+}
+
+
+.main-footer.style-three .footer-two_logo-widget{
+	padding: 70px 70px;
+	background-color: var(--white-color);
+}
+
+.main-footer.style-three .widgets-section{
+	padding: 0px;
+}
+
+.main-footer.style-three .footer-text{
+	color: var(--color-two);
+}
+
+.main-footer.style-three .footer-social_box a{
+	color: var(--white-color);
+	background-color: var(--color-two);
+}
+
+.main-footer.style-three .links-widget{
+	margin-top: 90px;
+}
+
+.main-footer.style-three .footer-bottom{
+	background-color: var(--black-color);
+}

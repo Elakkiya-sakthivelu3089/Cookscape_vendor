@@ -1,0 +1,641 @@
+/* CookScape */
+
+/* RTL Style CSS Code */
+
+.rtl .row,
+.rtl .d-flex{
+	flex-direction: row-reverse;
+}
+
+.rtl .main-menu .navigation > li{
+	float:right;
+}
+
+.rtl .sticky-header .logo{
+	float:right;
+	padding-left:25px;
+}
+
+.rtl .main-menu{
+	text-align:right;
+}
+
+.rtl .main-header .main-menu .navigation > li > ul > li > ul > li,
+.rtl .main-header .main-menu .navigation > li > ul > li,
+.rtl .main-menu .navigation > li > ul > li{
+	text-align:right;
+}
+
+.rtl .main-header .main-menu .navigation > li > ul{
+	padding:20px 25px 20px 25px;
+}
+
+.rtl .main-header .main-menu .navigation > li > ul > li > a:before{
+	right:0px;
+	left:auto;
+	opacity: 0;
+}
+
+.rtl .main-menu .navigation > li > ul > li:hover > a{
+	padding-left:0px !important;
+	padding-right:30px;
+}
+
+.rtl .main-menu .navigation > li > ul > li > a:before{
+	left:auto;
+	right:8px;
+}
+
+.rtl .main-menu .navigation > li > ul > li.dropdown > a:after{
+	right:auto;
+	left:10px;
+	transform:rotate(180deg);
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul{
+	left:auto;
+	right:100%;
+}
+
+.rtl .main-menu .navigation li > ul > li.dropdown:hover > ul{
+	
+}
+
+.rtl .main-header .main-menu .navigation > li > ul > li > ul{
+	right:100%;
+	left:auto;
+}
+
+.rtl .main-menu .navigation > li > ul{
+	left:auto;
+	right:0px;
+}
+
+.rtl .main-menu .navigation > li.dropdown:hover > ul{
+	left:auto;
+	right:0px;
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul > li:hover > a{
+	padding-left:0px;
+	padding-right:30px;
+}
+
+.rtl .main-menu .navigation > li > ul > li > ul > li > a:before{
+	left:auto;
+	right:8px;
+	opacity: 0;
+}
+
+.rtl .main-header .main-menu .navigation > li:first-child{
+	margin-right: 0px;
+}
+
+.rtl .main-header .main-menu .navigation > li:last-child{
+	margin-right: 25px;
+}
+
+.rtl .search-popup .form-group input[type="text"],
+.rtl .search-popup .form-group input[type="search"]{
+	text-align: right;
+}
+
+.rtl .about-sidebar .content-box,
+.rtl .search-popup .form-group input[type="submit"],
+.rtl .search-popup .form-group button{
+	text-align: right;
+}
+
+.rtl .search-popup .form-group input[type="submit"],
+.rtl .search-popup .form-group button{
+	right: 0px;
+	left: auto;
+}
+
+.rtl .about-sidebar_list li{
+	padding-left:0px;
+	padding-right:30px;
+}
+
+.rtl .about-sidebar_list li:before{
+	right:0px;
+	left:auto;
+}
+
+.rtl .about-sidebar .social-box{
+	text-align:right;
+	margin-right:35px;
+}
+
+.rtl .coming-soon .emailed-form .form-group input[type="submit"],
+.rtl .coming-soon .emailed-form button{
+	left:5px;
+	right:auto;
+}
+
+.rtl .default-form .form-group input[type="text"],
+.rtl .default-form .form-group input[type="password"],
+.rtl .default-form .form-group input[type="tel"],
+.rtl .default-form .form-group input[type="email"],
+.rtl .default-form .form-group textarea,
+.rtl .coming-soon .emailed-form .form-group input[type="text"],
+.rtl .coming-soon .emailed-form .form-group input[type="tel"],
+.rtl .coming-soon .emailed-form .form-group input[type="email"],
+.rtl .coming-soon .emailed-form .form-group textarea,
+.rtl .shipping-form .form-group input[type="text"],
+.rtl .shipping-form .form-group input[type="password"],
+.rtl .shipping-form .form-group input[type="tel"],
+.rtl .shipping-form .form-group input[type="email"],
+.rtl .shipping-form .form-group select,
+.rtl .shipping-form .form-group textarea,
+.rtl .shipping-form .form-group .ui-selectmenu-button.ui-button,
+.rtl .contact-form .form-group input[type="text"],
+.rtl .contact-form .form-group input[type="password"],
+.rtl .contact-form .form-group input[type="tel"],
+.rtl .contact-form .form-group input[type="email"],
+.rtl .contact-form .form-group select,
+.rtl .contact-form .form-group textarea,
+.rtl .comment-form .form-group input[type="text"],
+.rtl .comment-form .form-group input[type="password"],
+.rtl .comment-form .form-group input[type="tel"],
+.rtl .comment-form .form-group input[type="email"],
+.rtl .comment-form .form-group textarea,
+.page-wrapper.rtl{
+	text-align:right;
+}
+
+.rtl .sec-title_title{
+	display: block;
+}
+
+.rtl .slider-one_text{
+	max-width: 100%;
+}
+
+.rtl .slider-one_content-inner{
+	max-width: 550px;
+}
+
+.rtl .about-two_list li,
+.rtl .commited-one_list li,
+.rtl .about-one_list li,
+.rtl .price-block_one .price-one_list li{
+	padding-left: 0px;
+	padding-right: 30px;
+}
+
+.rtl .price-block_one .price-one_list li:before,
+.rtl .about-two_list li:before,
+.rtl .commited-one_list li i,
+.rtl .about-one_list li:before{
+	right:0px;
+	left:auto;
+}
+
+.rtl .price-block_one .price-one_list{
+	border-left:0px;
+	padding-left:0px;
+	padding-right:35px;
+	border-right:1px solid rgba(0, 0, 0, 0.06);
+}
+
+.rtl .counter-block .lines{
+	left:35px;
+	right:auto;
+}
+
+.rtl .cta-one_text,
+.rtl .commited-one .image img{
+	max-width:100%;
+}
+
+.rtl .commited-one .content-box .side-icon{
+	left:50px;
+	right:auto;
+}
+
+.rtl .about-two_image-two,
+.rtl .commited-one .side-image{
+	display: none;
+}
+
+.rtl .commited-one .content{
+	max-width:100%;
+}
+
+.rtl .footer-two_location{
+	padding-left:0px;
+	padding-right: 70px;
+}
+
+.rtl .footer-two_location .icon{
+	right:0px;
+	left:auto;
+}
+
+.rtl .news-widget-block{
+	padding-left:0px;
+	padding-right:85px;
+}
+
+.rtl .news-widget_image{
+	right:0px;
+	left:auto;
+}
+
+.rtl .about-two{
+	overflow: hidden;
+}
+
+.rtl .about-two_content{
+	padding-right: 0px;
+}
+
+.rtl .project-two .row{
+	flex-direction: inherit;
+}
+
+.rtl .project-two .filters .filter-tabs{
+	padding-left:0px;
+	padding-right: 60px;
+	border-left:0px;
+	border-right:1px solid rgba(var(--white-color-rgb), 0.30);
+}
+
+.rtl .project-two .filters{
+	left:250px;
+}
+
+.rtl .blog-detail_list li,
+.rtl .privacy-section .privacy-list li,
+.rtl .process-one_list li{
+	padding-left:0px;
+	padding-right:25px;
+}
+
+.rtl .blog-detail_list li:before,
+.rtl .privacy-section .privacy-list li:before,
+.rtl .process-one_list li:before{
+	right:0px;
+	left:auto;
+}
+
+.rtl .default-count-box{
+	left:0px;
+	right:auto;
+}
+
+.rtl .project-two .filters .filter-tabs li:before{
+	right:-64px;
+	left:auto;
+}
+
+.rtl .newsletter-box_two .form-group input[type="text"],
+.rtl .newsletter-box_two .form-group input[type="email"],
+.rtl .newsletter-box .form-group input[type="text"],
+.rtl .newsletter-box .form-group input[type="email"]{
+	text-align:right;
+}
+
+.rtl .newsletter-box_two .form-group button{
+	right:auto;
+	left:20px;
+}
+
+.rtl .newsletter-box .form-group button{
+	left:25px;
+	right:auto;
+}
+
+.rtl .footer-contact_list li{
+	padding-left:0px;
+	padding-right:45px;
+}
+
+.rtl .footer-contact_list li .icon{
+	right:0px;
+	left:auto;
+}
+
+.rtl .main-header .mobile-menu .navigation li.dropdown .dropdown-btn{
+	left:-1px;
+	right:auto;
+}
+
+.rtl .about-three_info{
+	padding-left:0px;
+}
+
+.rtl .about-three_info .icon{
+	right:0px;
+	left:auto;
+}
+
+.rtl .service-block_four-icon{
+	left:30px;
+	right:auto;
+}
+
+.rtl .category-list li span{
+	left:0px;
+	right:auto;
+}
+
+.rtl .service-detail_list li{
+	flex-direction:row-reverse;
+}
+
+.rtl .service-detail blockquote .icon{
+	left:-10px;
+	right:auto;
+}
+
+.rtl .feature-list_inner{
+	padding-left:0px;
+	padding-right:80px;
+}
+
+.rtl .feature-list_inner .icon{
+	right:0px;
+	left:auto;
+}
+
+.rtl .sidebar .related-posts .post{
+	padding-left:0px;
+	padding-right:150px;
+}
+
+.rtl .sidebar .related-posts .post .post-thumb{
+	right:0px;
+	left:auto;
+}
+
+.rtl .shop-detail_content-column .inner-column{
+	padding-left:0px;
+}
+
+.rtl .item-quantity{
+	margin-left:25px;
+	margin-right:0px;
+}
+
+.rtl .comment-box .comment{
+	padding-left:0px;
+	padding-right:80px;
+}
+
+.rtl .comment-box .author-thumb{
+	right:0px;
+	left:auto;
+}
+
+.rtl .order-box .order-total span,
+.rtl .order-totals li span{
+	left:25px;
+	right:auto;
+}
+
+.rtl .cart-totals li span{
+	left:0px;
+	right:auto;
+}
+
+.rtl .post-widget .post{
+	padding-left:0px;
+	padding-right:100px;
+}
+
+.rtl .post-widget .post .thumb{
+	left:auto;
+	right:0px;
+}
+
+.rtl .blog-author-post_inner{
+	padding-left:0px;
+	padding-right:180px;
+}
+
+.rtl .blog-detail_author-image{
+	right:0px;
+	left:auto;
+}
+
+.rtl .comment-form-outer .rating strong{
+	margin-left:0px;
+}
+
+.rtl .comment-form-outer .rating{
+	margin-right:20px;
+}
+
+.rtl .comment-box .comment-time{
+	margin-left:0px;
+	margin-right:15px;
+}
+
+.rtl .slider-one_video{
+	left:0px;
+	right:auto;
+}
+
+.rtl .main-header.header-style-one .header-lower .header-navbar{
+	padding:0px 35px 0px 15px;
+}
+
+.rtl .main-header.header-style-one .header-lower .header-navbar:after{
+	left:auto;
+	right:-60px;
+	border-left:none;
+	border-bottom: 90px solid var(--white-color);
+    border-right: 60px solid transparent;
+}
+
+.rtl .main-header.header-style-one .header-lower .header-navbar:before{
+	right:-60px;
+	left:auto;
+}
+
+.rtl .main-header.header-style-one .header-lower .header-navbar .nav-outer:before{
+	border-radius:80px 0px 0px 80px;
+}
+
+.rtl .main-header.header-style-one .header-lower .logo-box .logo:before{
+	border-radius:0px 80px 80px 0px;
+}
+
+.rtl .main-header.header-style-one .header-lower .logo-box .logo:after{
+    left: -62px;
+    right: auto;
+    border-right: none;
+    border-top: 90px solid var(--white-color);
+    border-left: 63px solid transparent;
+}
+
+.rtl .main-header.header-style-one .header-lower .logo-box:before{
+	right:auto;
+	left:-18px;
+	border-top: none;
+	border-right: none;
+	border-bottom: 20px solid var(--white-color);
+    border-left: 18px solid transparent;
+}
+
+.rtl .main-header.header-style-one .header-lower .logo-box .logo{
+	padding-right: 40px;
+}
+
+.rtl .main-header .main-menu .navigation > li:last-child{
+	margin-right:15px !important;
+}
+
+.rtl .main-header.header-style-two .header-lower .inner-container{
+	padding-left:25px;
+	padding-right:0px;
+}
+
+.rtl .header-top .social-box{
+	margin-left:0px;
+	margin-right:20px;
+}
+
+.rtl .main-header.header-style-two .header-lower .logo-box:before{
+	border-radius: 10px 80px 80px 10px;
+	border-right:0px;
+    border-left: 7px solid var(--main-color);
+}
+
+.rtl .search-popup .close-search{
+	left:25px;
+	right:auto;
+}
+
+/* CookScape */
+
+@media only screen and (max-width: 1780px){
+
+	
+
+}
+
+@media only screen and (max-width: 1600px){
+	
+	
+	
+}
+
+@media only screen and (max-width: 1550px){
+
+	
+
+}
+
+@media only screen and (max-width: 1500px){
+	
+	
+	
+}
+
+@media only screen and (max-width: 1350px){
+	
+	.rtl .main-header.header-style-one .header-lower .header-navbar .main-header_button{
+		display: none;
+	}
+	
+	.rtl .main-header.header-style-one .header-lower .logo-box .logo{
+		padding-right: 0px;
+	}
+	
+	.rtl .main-header.header-style-one .header-lower .header-navbar{
+		padding: 0px 0px;
+	}
+	
+}
+
+@media only screen and (max-width: 1300px){
+	
+	
+	
+}
+
+@media only screen and (max-width: 1240px){
+	
+	.rtl .project-two .filters{
+		left:0px;
+	}
+	
+	.rtl .project-two .filters .filter-tabs{
+		padding:0px;
+		border: none;
+	}
+	
+}
+
+@media only screen and (max-width: 1140px){
+	
+	
+	
+}
+
+@media only screen and (max-width: 1023px){
+	
+	
+	
+}
+
+@media only screen and (max-width: 990px){
+	
+	.dark-body .main-header.header-style-one .header-lower{
+		background-color: var(--white-color);
+	}
+	
+	.rtl .main-header.header-style-one .header-lower .logo-box .logo{
+		padding: 15px 0px;
+	}
+	
+	.rtl .main-header.header-style-two .header-lower .inner-container{
+		padding-left: 0px;
+	}
+	
+}
+
+@media only screen and (max-width: 767px){
+	
+	.rtl .testimonial-block_one-author .quote{
+		display: none;
+	}
+	
+	.rtl .slider-one_content-inner{
+		max-width:100%;
+	}
+	
+	.rtl .project-tab .product-tab-btns .p-tab-btn{
+		margin-left:20px;
+		margin-right:0px;
+	}
+	
+}
+
+@media only screen and (max-width: 599px){
+	
+	.rtl .counter-block .content{
+		padding-right:0px;
+	}
+	
+	.rtl .about-three_info {
+		padding-right: 70px;
+	}
+	
+}
+
+@media only screen and (max-width: 479px) {
+	
+	.rtl .price-block_one .price-one_list{
+		padding:0px;
+		border: none;
+	}
+	
+	.rtl .comment-box .comment{
+		padding-right:0px;
+	}
+	
+}

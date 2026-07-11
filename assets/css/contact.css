@@ -1,0 +1,123 @@
+/* CookScape */
+
+/*** 
+
+====================================================================
+	Contact One
+====================================================================
+
+***/
+
+.contact-one{
+	position:relative;
+	padding: 110px 0px 90px;
+}
+
+/* Map Two */
+
+.map-one{
+	position: relative;
+}
+
+.map-one.style-two{
+	padding-bottom: 110px;
+}
+
+.map-one iframe{
+	position: relative;
+	width: 100%;
+	height: 480px;
+}
+
+/*** 
+
+====================================================================
+	Infos One
+====================================================================
+
+***/
+
+.infos-one{
+	position:relative;
+	padding-bottom: 80px;
+}
+
+.info-block_one{
+	position:relative;
+	margin-bottom: 30px;
+}
+
+.info-block_one-inner{
+	position:relative;
+	padding: 40px 20px;
+	text-align: center;
+	background-color: var(--white-color);
+	border:1px solid rgba(var(--color-two-rgb), 0.15);
+}
+
+.info-block_one-icon{
+	position:relative;
+	font-size: 60px;
+	line-height:1em;
+	color: var(--main-color);
+	font-family: "flaticon_interior";
+}
+
+.info-block_one strong{
+	position:relative;
+	font-size: 24px;
+	font-weight: 600;
+	margin-top: 25px;
+	display: block;
+	margin-bottom: 20px;
+	color: var(--color-two);
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.info-block_one .info{
+	position:relative;
+}
+
+.info-block_one .info li{
+	position:relative;
+	font-size: 18px;
+	line-height: 30px;
+	padding-bottom: 60px;
+	color: var(--color-three);
+	text-transform: capitalize;
+}
+
+.info-block_one .info li:before{
+	position:absolute;
+	content:'';
+	left:50%;
+	bottom:8px;
+	width: 1px;
+	opacity: 0.10;
+	height: 45px;
+	background-color: var(--color-two);
+}
+
+.info-block_one .info li:last-child{
+	padding-bottom: 0px;
+}
+
+.info-block_one .info li:last-child::before{
+	display: none;
+}
+
+.info-block_one .info li a{
+	position:relative;
+	font-size: 22px;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.info-block_one .info li a:hover{
+	color: var(--color-two);
+}
+
+.infos-one.style-two{
+	padding-top: 110px;
+	padding-bottom: 0px;
+}

@@ -1,0 +1,128 @@
+/* CookScape */
+
+/*** 
+
+====================================================================
+	Accordion Style
+====================================================================
+
+***/
+
+.accordion-box{
+	position:relative;
+}
+
+.accordion-box .block{
+	position: relative;
+	overflow: hidden;
+	margin-bottom:20px;
+	background-color: var(--white-color);
+	border:1px solid rgba(var(--color-two-rgb), 0.15);
+}
+
+.accordion-box .block:last-child{
+	margin-bottom:0px;
+}
+
+.accordion-box .block .acc-btn{
+	position:relative;
+	cursor:pointer;
+	font-weight:600;
+	font-size:22px;
+	line-height:30px;
+	color: var(--color-two);
+	padding: 22px 70px 22px 30px;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.accordion-box .block .icon-outer{
+	position:absolute;
+	right: 16px;
+    top: 16px;
+	width: 44px;
+	height: 44px;
+	opacity:0.40;
+	line-height: 44px;
+	text-align: center;
+	border-radius: 50px;
+	font-size: 30px;
+	color:var(--color-two);
+	display: inline-block;
+	font-family: 'Font Awesome 5 Pro';
+}
+
+.accordion-box .block .icon-outer .icon{
+    position: absolute;
+    right:0px;
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+    color:var(--color-two);
+	-webkit-transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+.accordion-box .block .icon-outer .icon-plus{
+	opacity:1;
+}
+
+.accordion-box .block .icon-outer .icon-minus{
+	opacity:0;
+}
+
+.accordion-box .block .acc-btn.active {
+	
+}
+
+.accordion-box .block .acc-btn.active .icon-outer{
+	opacity:1;
+}
+
+.accordion-box .block .acc-btn.active .icon-outer .icon-minus{
+	opacity:1;
+	color:var(--white-color);
+}
+
+.accordion-box .block .acc-btn.active .icon-outer .icon-plus{
+	transform: rotate(90deg);
+}
+
+.accordion-box .block .acc-btn.active .icon-outer{
+	
+}
+
+.accordion-box .block .acc-content{
+	position:relative;
+	display:none;
+}
+
+.accordion-box .block .acc-content .content-text{
+	
+}
+
+.accordion-box .block.active-block{
+	
+}
+
+.accordion-box .block .acc-content.current{
+	display:block;	
+}
+
+.accordion-box .block .content{
+	position:relative;
+	padding:0px 40px 30px 35px;
+}
+
+.accordion-box .block .content .text{
+	opacity:0.80;
+	font-size: 18px;
+	line-height: 30px;
+	color:var(--color-two);
+}
+
+.accordion-box .block.active-block .text{
+	
+}

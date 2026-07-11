@@ -1,0 +1,273 @@
+/* CookScape */
+
+/*** 
+
+====================================================================
+	CTA One
+====================================================================
+
+***/
+
+.cta-one{
+	position:relative;
+	overflow: hidden;
+	background-size: cover;
+	padding: 120px 0px 120px;
+	background-attachment: fixed;
+}
+
+.cta-one:after{
+	position:absolute;
+	content:'';
+	right:-90px;
+	bottom:0px;
+	width: 150px;
+	height: 250px;
+	opacity: 0.50;
+	z-index:1;
+	transform: skewX(-25deg);
+	background-color: var(--main-color);
+}
+
+.cta-one .color-one{
+	position:absolute;
+	left:100px;
+	top:0px;
+	bottom:0px;
+	width: 200px;
+	transform: skewX(25deg);
+	background-color: var(--main-color);
+}
+
+.cta-one .color-one:before{
+	position:absolute;
+	content:'';
+	right:-70px;
+	top:0px;
+	width: 180px;
+	height: 120px;
+	opacity: 0.50;
+	transform: skewX(-50deg);
+	background-color: var(--main-color);
+}
+
+.cta-one .color-one:after{
+	position:absolute;
+	content:'';
+	left:-60px;
+	bottom:0px;
+	width: 160px;
+	height: 150px;
+	opacity: 0.50;
+	transform: skewX(-50deg);
+	background-color: var(--main-color);
+}
+
+.cta-one:before{
+	position:absolute;
+	content:'';
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	opacity: 0.50;
+	background-color: var(--color-two);
+}
+
+.cta-one_content{
+	position:relative;
+	margin-left: 450px;
+}
+
+.cta-one_title{
+	position:relative;
+	color: var(--white-color);
+}
+
+.cta-one_text{
+	position:relative;
+	font-size: 16px;
+	line-height: 30px;
+	max-width: 600px;
+	margin-top: 30px;
+	text-transform:capitalize;
+	color: var(--white-color);
+}
+
+.cta-one_buttons{
+	position:relative;
+	gap: 30px;
+	margin-top: 30px;
+}
+
+/*** 
+
+====================================================================
+	CTA Two
+====================================================================
+
+***/
+
+.cta-two{
+	position:relative;
+	z-index:10;
+	margin-bottom: -96px;
+}
+
+.cta-two .inner-container{
+	position:relative;
+	padding: 60px 70px;
+	border-radius: 150px;
+	background-color: var(--main-color);
+}
+
+.cta-two_heading{
+	position:relative;
+	margin-bottom: 10px;
+	color: var(--black-color);
+	text-transform: uppercase;
+}
+
+.cta-two_title{
+	position:relative;
+	font-size: 20px;
+	color: var(--black-color);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+/* Newsletter Box */
+
+.newsletter-box{
+    position: relative;
+}
+
+.newsletter-box .form-group {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.newsletter-box .form-group input[type="text"],
+.newsletter-box .form-group input[type="email"] {
+    position: relative;
+    line-height: 43px;
+    display: block;
+    height: 64px;
+    width: 100%;
+	width: 450px;
+	border-radius: 50px;
+    box-shadow: inherit;
+    font-size: 16px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    padding: 10px 30px;
+    color:var(--white-color);
+    background: rgba(var(--black-color-rgb), 0.20);
+}
+
+.newsletter-box .form-group button {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+	bottom: 5px;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 20px;
+    background:none;
+	color: var(--white-color);
+}
+
+
+/*** 
+
+====================================================================
+	CTA Three
+====================================================================
+
+***/
+
+.cta-three{
+	position:relative;
+	z-index:10;
+	margin-top: -96px;
+}
+
+.cta-three .inner-container{
+	position:relative;
+	padding: 60px 70px;
+}
+
+.cta-three .inner-container:before{
+	position:absolute;
+	content:'';
+	right:0px;
+	top:0px;
+	bottom:0px;
+	width: 200%;
+	background-color: var(--color-two);
+}
+
+.cta-three_heading{
+	position:relative;
+	margin-bottom: 10px;
+	color: var(--white-color);
+	text-transform: uppercase;
+}
+
+.cta-three_title{
+	position:relative;
+	font-size: 20px;
+	color: var(--white-color);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+/* Newsletter Box */
+
+.newsletter-box_two{
+    position: relative;
+}
+
+.newsletter-box_two .form-group {
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.newsletter-box_two .form-group input[type="text"],
+.newsletter-box_two .form-group input[type="email"] {
+    position: relative;
+    line-height: 43px;
+    display: block;
+    height: 60px;
+    width: 100%;
+	width: 450px;
+	border-radius: 0px;
+    box-shadow: inherit;
+    font-size: 16px;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    padding: 10px 30px;
+    color:var(--color-two);
+    background: rgba(var(--white-color-rgb), 1);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.newsletter-box_two .form-group button {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+	bottom: 5px;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 20px;
+    background:none;
+	color: var(--main-color);
+}

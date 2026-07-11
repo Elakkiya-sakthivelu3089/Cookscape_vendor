@@ -1,0 +1,102 @@
+/* CookScape */
+
+/***
+
+====================================================================
+	Page Title
+====================================================================
+
+***/
+
+.page-title{
+	position:relative;
+	background-size:cover;
+	padding:320px 0px 0px;
+	background-attachment: fixed;
+}
+
+.page-title .auto-container{
+	position:relative;
+}
+
+.page-title:before{
+	position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 300px;
+    background-image: linear-gradient(to bottom, #000000, rgba(255, 255, 255, 0));
+}
+
+.page-title:after{
+	position:absolute;
+	content:'';
+	left:0px;
+	top:0px;
+	right:0px;
+	bottom:0px;
+	opacity:0.60;
+	background-color:var(--black-color);
+}
+
+.page-title h1{
+	z-index:1;
+	font-weight: 600;
+	padding-bottom:170px;
+	text-transform:capitalize;
+	color:var(--white-color);
+}
+
+.page-title .bread-crumb{
+	position: absolute;
+	right:0px;
+	bottom:0px;
+	z-index:1;
+	padding: 18px 40px;
+	display: inline-block;
+	background-color:var(--main-color);
+}
+
+.page-title .bread-crumb li{
+	position: relative;
+	font-weight: 600;
+	font-size: 18px;
+	letter-spacing:1px;
+	margin-right: 15px;
+	padding-right: 15px;
+	display:inline-block;
+	color: var(--black-color);
+	text-transform:uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.page-title .bread-crumb li:before{
+	position: absolute;
+	right: -6px;
+	top:0px;
+    content: "::";
+	color:var(--black-color);
+}
+
+.page-title .bread-crumb li:last-child{
+	padding-right: 0;
+	margin-right: 0;
+}
+
+.page-title .bread-crumb li:last-child:before{
+	display: none;
+}
+
+.page-title .bread-crumb li a{
+	color: var(--black-color);
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;	
+}
+
+.page-title .bread-crumb li a:hover{
+	color: var(--color-two);
+}

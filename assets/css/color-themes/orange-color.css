@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+:root {
+	
+	/* #f7a73e in decimal RGB */
+  --main-color: rgb(247,167,62);
+  --main-color-rgb: 247,167,62;
+	
+}
+
+.page-title .pattern-1,
+.page-title .pattern-2,
+.error-one_image,
+.project-four_bg,
+.slider-three_pattern,
+.choose-one_shadow{
+	filter: grayscale(100%);
+}

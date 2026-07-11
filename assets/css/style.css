@@ -1,0 +1,48 @@
+﻿/* CookScape */
+
+/*** 
+
+====================================================================
+	Attachment Css Files
+====================================================================
+
+***/
+
+@import url('global.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('animate.css');
+@import url('rtl.css');
+@import url('dark-body.css');
+
+@import url('slider.css');
+@import url('about.css');
+@import url('services.css');
+@import url('accordion.css');
+@import url('process.css');
+@import url('clients.css');
+@import url('projects.css');
+@import url('pricing.css');
+@import url('team.css');
+@import url('testimonial.css');
+@import url('news.css');
+@import url('contact.css');
+@import url('commited.css');
+@import url('faq.css');
+@import url('counter.css');
+@import url('flaticon_interior.css');
+
+@import url('cta.css');
+@import url('shop.css');
+@import url('privacy.css');
+@import url('not-found.css');
+@import url('coming-soon.css');
+@import url('page-title.css');
+@import url('jquery-ui.css');
+@import url('swiper.min.css');
+@import url('font-awesome.css');
+@import url('fontawesome-free.css');
+@import url('custom-animate.css');
+@import url('magnific-popup.css');
+@import url('odometer-theme-default.css');
+@import url('jquery.bootstrap-touchspin.css');

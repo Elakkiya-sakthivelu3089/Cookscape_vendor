@@ -1,0 +1,612 @@
+﻿<!-- Modal -->
+<div
+  class="modal fade modal-lg"
+  id="EnquiryModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="EnquiryModalTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="EnquiryModalTitle">Quick Estimate</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="form-card">
+            <div class="decorative-element"></div>
+            <div class="form-content">
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-steps">
+                  <span
+                    class="progress-step active"
+                    data-step="1"
+                    data-number="1"
+                    >About You</span
+                  >
+                  <span class="progress-step" data-step="2" data-number="2"
+                    >Requirements</span
+                  >
+                  <span class="progress-step" data-step="3" data-number="3"
+                    >Preferences</span
+                  >
+                  <span class="progress-step" data-step="4" data-number="4"
+                    >Final Details</span
+                  >
+                </div>
+              </div>
+
+              <div class="error-message" id="errorMessage"></div>
+
+              <form id="multiStepForm">
+                <!-- Step 1 -->
+                <div class="form-step active" data-step="1">
+                  <div class="form-group">
+                    <label for="fullName"
+                      >Full Name <span class="required">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="estimatefullName"
+                      name="fullName"
+                      placeholder="John Smith"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email"
+                      >Email Address <span class="required">*</span></label
+                    >
+                    <input
+                      type="email"
+                      id="estimateemailid"
+                      name="email"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="estimatephonenumber"
+                      name="phone"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="form-step" data-step="2">
+                  <div class="form-group">
+                    <label
+                      >What's your primary requirement?
+                      <span class="required">*</span></label
+                    >
+                    <div class="container mt-5">
+                      <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <a
+                            class="nav-link active"
+                            id="nav-home-tab"
+                            data-bs-toggle="tab"
+                            href="#nav-home"
+                            role="tab"
+                            aria-controls="nav-home"
+                            aria-selected="true"
+                            >Home Interior</a
+                          >
+                          <a
+                            class="nav-link"
+                            id="nav-profile-tab"
+                            data-bs-toggle="tab"
+                            href="#nav-profile"
+                            role="tab"
+                            aria-controls="nav-profile"
+                            aria-selected="false"
+                            >Kitchen</a
+                          >
+                          <a
+                            class="nav-link"
+                            id="nav-contact-tab"
+                            data-bs-toggle="tab"
+                            href="#nav-contact"
+                            role="tab"
+                            aria-controls="nav-contact"
+                            aria-selected="false"
+                            >Wardrobe</a
+                          >
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div
+                          class="tab-pane fade show active"
+                          id="nav-home"
+                          role="tabpanel"
+                          aria-labelledby="nav-home-tab"
+                        >
+                          <div class="row">
+                            <h5>BHK type</h5>
+                            <div class="form-group">
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblHouseBHK"
+                                  value="always"
+                                />1 BHK
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblHouseBHK"
+                                  value="never"
+                                />2 BHK
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblHouseBHK"
+                                  value="costChange"
+                                />3 BHK
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblHouseBHK"
+                                  value="costChange"
+                                />4 BHK
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblHouseBHK"
+                                  value="costChange"
+                                />5+ BHK
+                              </label>
+                            </div>
+                          </div>
+                          <hr />
+                          <div class="row">
+                            <h5>Room type</h5>
+                            <div class="form-group">
+                              <label>
+                                <input
+                                  type="number"
+                                  min="0"
+                                  max="5"
+                                  name="rblHouseRoomType"
+                                  value="1"
+                                />Living Room
+                              </label>
+                              <label>
+                                <input
+                                  type="number"
+                                  min="0"
+                                  max="5"
+                                  name="rblHouseRoomType"
+                                  value="1"
+                                />Kitchen
+                              </label>
+                              <label>
+                                <input
+                                  type="number"
+                                  min="0"
+                                  max="5"
+                                  name="rblHouseRoomType"
+                                  value="2"
+                                />Bedroom
+                              </label>
+                              <label>
+                                <input
+                                  type="number"
+                                  min="0"
+                                  max="5"
+                                  name="rblHouseRoomType"
+                                  value="2"
+                                />Bathroom
+                              </label>
+                              <label>
+                                <input
+                                  type="number"
+                                  min="0"
+                                  max="5"
+                                  name="rblHouseRoomType"
+                                  value="1"
+                                />Dining
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="nav-profile"
+                          role="tabpanel"
+                          aria-labelledby="nav-profile-tab"
+                        >
+                          <div class="row">
+                            <h5>Kitchen Layout (in feet)</h5>
+                            <div class="form-group">
+                              <fieldset class="border p-2">
+                                <legend class="float-none w-auto p-2">
+                                  <input
+                                    type="radio"
+                                    name="rblKitchenType"
+                                    value="costChange"
+                                  />L-Shaped
+                                </legend>
+                                <label>
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenLshaped"
+                                          value="1"
+                                        />
+                                        A
+                                      </td>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenLshaped"
+                                          value="1"
+                                        />
+                                        B
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </label>
+                              </fieldset>
+                              <fieldset
+                                class="border p-2"
+                                style="margin-left: 5%"
+                              >
+                                <legend class="float-none w-auto p-2">
+                                  <input
+                                    type="radio"
+                                    name="rblKitchenType"
+                                    value="costChange"
+                                  />Parallel
+                                </legend>
+                                <label>
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenParallel"
+                                          value="1"
+                                        />
+                                        A
+                                      </td>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenParallel"
+                                          value="1"
+                                        />
+                                        B
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </label>
+                              </fieldset>
+                              <fieldset class="border p-2">
+                                <legend class="float-none w-auto p-2">
+                                  <input
+                                    type="radio"
+                                    name="rblKitchenType"
+                                    value="costChange"
+                                  />Straight
+                                </legend>
+                                <label>
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenStraight"
+                                          value="1"
+                                        />
+                                        A
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </label>
+                              </fieldset>
+                              <fieldset
+                                class="border p-2"
+                                style="margin-left: 5%"
+                              >
+                                <legend class="float-none w-auto p-2">
+                                  <input
+                                    type="radio"
+                                    name="rblKitchenType"
+                                    value="costChange"
+                                  />U-Shaped
+                                </legend>
+                                <label>
+                                  <table>
+                                    <tr>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenUshaped"
+                                          value="1"
+                                        />
+                                        A
+                                      </td>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenUshaped"
+                                          value="1"
+                                        />
+                                        B
+                                      </td>
+                                      <td>
+                                        <input
+                                          type="number"
+                                          min="0"
+                                          max="20"
+                                          name="KitchenUshaped"
+                                          value="1"
+                                        />
+                                        C
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </label>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          class="tab-pane fade"
+                          id="nav-contact"
+                          role="tabpanel"
+                          aria-labelledby="nav-contact-tab"
+                        >
+                          <div class="row">
+                            <h5>Wardrobe Height</h5>
+                            <div class="form-group">
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobelength"
+                                  value="4"
+                                />4 feet
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobelength"
+                                  value="5"
+                                />5 feet
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobelength"
+                                  value="6"
+                                />6 feet
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobelength"
+                                  value="7"
+                                />7 feet
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobelength"
+                                  value="8"
+                                />8 feet
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobelength"
+                                  value="9"
+                                />9 feet
+                              </label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <h5>Wardrobe Type</h5>
+                            <div class="form-group">
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobetype"
+                                  value="4"
+                                />Sliding
+                              </label>
+                              <label>
+                                <input
+                                  type="radio"
+                                  name="rblWardrobetype"
+                                  value="5"
+                                />Swing
+                              </label>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <h5>Wardrobe Accessories</h5>
+                            <div class="form-group">
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="rblWardrobefinish"
+                                  value="4"
+                                />Loft
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="rblWardrobefinish"
+                                  value="5"
+                                />Single full-size drawer
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="rblWardrobefinish"
+                                  value="5"
+                                />1 half-drawer
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="rblWardrobefinish"
+                                  value="5"
+                                />2 half-drawer
+                              </label>
+                              <label>
+                                <input
+                                  type="checkbox"
+                                  name="rblWardrobefinish"
+                                  value="5"
+                                />Wicker pull out
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="form-step" data-step="3">
+                  <label>Pick your package</label>
+                  <div class="form-group">
+                    <table style="width: 100%">
+                      <tr>
+                        <td style="width: 33%">
+                          <label>
+                            <input
+                              type="radio"
+                              min="0"
+                              max="20"
+                              name="package"
+                              value="1"
+                            />Essentials (₹₹)
+                          </label>
+                          <ul>
+                            <li>Affordable pricing</li>
+                            <li>Convenient designs</li>
+                            <li>Basic accessories</li>
+                          </ul>
+                        </td>
+                        <td style="width: 33%">
+                          <label>
+                            <input
+                              type="radio"
+                              min="0"
+                              max="20"
+                              name="package"
+                              value="2"
+                            />Premium (₹₹₹)
+                          </label>
+                          <ul>
+                            <li>Mid-range pricing</li>
+                            <li>Premium designs</li>
+                            <li>Wide range of accessories</li>
+                          </ul>
+                        </td>
+                        <td style="width: 33%">
+                          <label>
+                            <input
+                              type="radio"
+                              min="0"
+                              max="20"
+                              name="package"
+                              value="3"
+                            />Luxe (₹₹₹₹)
+                          </label>
+                          <ul>
+                            <li>Elite pricing</li>
+                            <li>Lavish designs</li>
+                            <li>Extensive range of accessories</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="form-step" data-step="4">
+                  <div class="form-group">
+                    <label for="message">Tell us more about your needs</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="10"
+                      placeholder="Share any additional details that would help us serve you better..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="button-group">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="prevBtn"
+                    style="display: none"
+                  >
+                    Back
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger floatend"
+                    id="nextBtn"
+                  >
+                    Continue
+                  </button>
+                </div>
+              </form>
+
+              <div class="success-message" id="successMessage">
+                <div class="success-icon"></div>
+                <h3>Thank You!</h3>
+                <p>
+                  We've received your information and will be in touch shortly.
+                  Check your email for confirmation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

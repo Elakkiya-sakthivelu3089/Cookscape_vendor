@@ -1,0 +1,193 @@
+s/* CookScape */
+
+/*** 
+
+====================================================================
+	Counter One
+====================================================================
+
+***/
+
+.counter-one{
+	position:relative;
+	background-color: var(--white-color);
+	border-top: 1px solid rgba(var(--black-color-rgb), 0.08);
+	border-bottom: 1px solid rgba(var(--black-color-rgb), 0.08);
+}
+
+.counter-one .auto-container{
+	max-width: 1600px;
+}
+
+.counter-block{
+	position:relative;
+}
+
+.counter-block:last-child .inner{
+	border: none;
+}
+
+.counter-block .inner{
+	position:relative;
+	padding: 50px 0px;
+	border-right: 1px solid rgba(var(--black-color-rgb), 0.08);
+}
+
+.counter-block .lines{
+	position:absolute;
+	right:35px;
+	bottom:0px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.counter-block .lines .line{
+	width: 7px;
+	height: 45px;
+	opacity:0.60;
+	margin: 0px 7px;
+	display: inline-block;
+	background-color: var(--main-color);
+	animation: bounce 1.2s ease-in-out infinite;
+}
+
+.counter-block .lines .line:nth-child(1){
+	animation-delay: 0s;
+}
+
+.counter-block .lines .line:nth-child(2){
+	animation-delay: 0.2s;
+}
+
+.counter-block .lines .line:nth-child(3){
+	animation-delay: 0.4s;
+}
+
+/* Animation Keyframes */
+@keyframes bounce {
+	0%, 100% {
+		height: 40px;
+	}
+	50% {
+		height: 90px;
+	}
+}
+
+.counter-block .content{
+	position:relative;
+	padding-left: 80px;
+	padding-right: 30px;
+}
+
+.counter-block .icon{
+	position:absolute;
+	left:0px;
+	top:2px;
+	font-size: 60px;
+	line-height:1em;
+	color: var(--color-two);
+	font-family: "flaticon_interior";
+}
+
+.counter-block .inner:hover .icon{
+	animation: jello 1s;
+}
+
+.counter-block .count-box{
+	position:relative;
+	font-size: 40px;
+	line-height:1em;
+	font-weight: 600;
+	color: var(--color-two);
+}
+
+.counter-block .text{
+	position:relative;
+	margin-top: 10px;
+	font-size: 16px;
+	font-weight:700;
+	color: var(--color-three);
+	text-transform: uppercase;
+}
+
+/*** 
+
+====================================================================
+	Counter One
+====================================================================
+
+***/
+
+.counter-two{
+	position:relative;
+	padding-bottom: 80px;
+}
+
+.counter-block_two{
+	position:relative;
+	margin-bottom: 30px;
+}
+
+.counter-block_two .inner{
+	position:relative;
+	padding: 0px 0px;
+	text-align: center;
+	background-color:var(--white-color);
+}
+
+.counter-block_two .inner:before{
+	position:absolute;
+	content:'';
+	left:0px;
+	top:30px;
+	right:0px;
+	bottom:22px;
+	border: 1px solid rgba(var(--black-color-rgb), 0.08);
+}
+
+.counter-block_two .inner:after{
+	position:absolute;
+	content:'';
+	left:60px;
+	top:0px;
+	right:60px;
+	bottom:0px;
+	background-color:var(--white-color);
+}
+
+.counter-block_two .content{
+	position:relative;
+	z-index:1;
+}
+
+.counter-block_two .icon{
+	position:relative;
+	font-size: 64px;
+	line-height:1em;
+	color: var(--main-color);
+	font-family: "flaticon_interior";
+}
+
+.counter-block_two .inner:hover .icon{
+	animation: jello 1s;
+}
+
+.counter-block_two .count-box{
+	position:relative;
+	font-size: 47px;
+	line-height:1em;
+	font-weight: 600;
+	color: var(--color-two);
+	font-family: "Barlow Condensed", sans-serif;
+}
+
+.counter-block_two .text{
+	position:relative;
+	margin-top: 25px;
+	font-size: 24px;
+	font-weight:600;
+	margin-bottom:20px;
+	color: var(--color-two);
+	text-transform: uppercase;
+	font-family: "Barlow Condensed", sans-serif;
+}
