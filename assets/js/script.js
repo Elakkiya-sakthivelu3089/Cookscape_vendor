@@ -68,6 +68,19 @@
         return lastDate.toDateString() === now.toDateString();
     }
 
+    function trackCookscapeLead(source) {
+        if (typeof window.fbq !== "function") {
+            return;
+        }
+
+        window.cookscapeAllowLeadPixel = true;
+        window.fbq("track", "Lead", {
+            content_name: source,
+            content_category: "Lead Generation"
+        });
+        window.cookscapeAllowLeadPixel = false;
+    }
+
     function sendEmail(name, email, phone_number, msg_subject, message) {
         var settings = {
             "url": "https://api.juaninfotech.com/api/User/SendCookscapeEmail?Name=" + name +
@@ -85,7 +98,6 @@
         var overlay = document.getElementById("cookscapePopupOverlay");
         if (overlay) overlay.style.display = "block";
     });
-
 
     $(document).on('click', '#btnSubmitShortContact', function () {
         let name = $('#shortcontactName').val().trim();
@@ -117,10 +129,34 @@
         }
 
         if (!valid) return;
-        localStorage.setItem("cookscapePopupSubmitted", Date.now());
-        // SUCCESS – submit
-        var overlay = document.getElementById("cookscapePopupOverlay");
-        if (overlay) overlay.style.display = "none";
+
+        var settings = {
+            url: "https://api.juaninfotech.com/api/User/SendCookscapeEmail?Name=" +
+                encodeURIComponent(name) +
+                "&Email=" +
+                encodeURIComponent(email) +
+                "&Mobile=" +
+                encodeURIComponent(mobile) +
+                "&Subject=" +
+                encodeURIComponent("Short Contact Popup") +
+                "&Message=" +
+                encodeURIComponent("Short contact form submission from the website."),
+            method: "POST",
+            timeout: 30000
+        };
+
+        $.ajax(settings)
+            .done(function (response) {
+                console.log("Short contact submitted successfully:", response);
+                localStorage.setItem("cookscapePopupSubmitted", Date.now());
+                trackCookscapeLead("Short Contact Popup");
+                var overlay = document.getElementById("cookscapePopupOverlay");
+                if (overlay) overlay.style.display = "none";
+            })
+            .fail(function (xhr, status, error) {
+                console.warn("Short contact submission failed:", status, error);
+                showErr('#shortcontactEmail', '#errEmail', 'Unable to submit right now. Please try again.');
+            });
     });
 
     function showErr(input, err, msg) {
@@ -185,9 +221,16 @@
                 "timeout": 0,
             };
 
-            $.ajax(settings).done(function (response) {
-                console.log(response);
-            });
+            $.ajax(settings)
+                .done(function (response) {
+                    console.log(response);
+                    trackCookscapeLead("Contact Form");
+                })
+                .fail(function (xhr, status, error) {
+                    console.warn("Contact form submission failed:", status, error);
+                    $("#contactForm")[0].reset();
+                    submitMSG(false, "Unable to submit right now. Please try again.");
+                });
         }
 
         function sendEmail(name, email, phone_number, msg_subject, message) {
@@ -393,92 +436,81 @@
             });
             return data;
         }
-nextBtn.addEventListener("click", () => {
-    if (!validateStep()) {
-        return;
-    }
-
-    // Continue to next page
-    if (currentStep < totalSteps) {
-        currentStep++;
-        updateProgress();
-        return;
-    }
-
-    // Final page submission
-    if (hasSubmitted) {
-        return;
-    }
-
-    hasSubmitted = true;
-    nextBtn.disabled = true;
-    prevBtn.disabled = true;
-    nextBtn.textContent = "Submitting...";
-
-    const formData = collectFormData();
-    console.log("Form submitted:", formData);
-
-    const emailBody = buildEstimateEmailBody();
-
-    const settings = {
-        url:
-            "https://api.juaninfotech.com/api/User/SendCookscapeEmail" +
-            "?Name=" +
-            encodeURIComponent($("#estimatefullName").val()) +
-            "&Email=" +
-            encodeURIComponent($("#estimateemailid").val()) +
-            "&Mobile=" +
-            encodeURIComponent($("#estimatephonenumber").val()) +
-            "&Subject=" +
-            encodeURIComponent("Quick Estimate Lead") +
-            "&Message=" +
-            encodeURIComponent(emailBody),
-
-        method: "POST",
-        timeout: 30000
-    };
-
-    function completeEstimateSubmission() {
-        // Meta Lead fires only once, after the final submit request is sent.
-        if (typeof window.fbq === "function") {
-            window.cookscapeAllowLeadPixel = true;
-            window.fbq("track", "Lead", {
-                content_name: "Quick Estimate Form",
-                content_category: "Free Estimate"
-            });
-            window.cookscapeAllowLeadPixel = false;
-        }
-
-        form.style.display = "none";
-        document.querySelector(".progress-container").style.display = "none";
-        document.querySelector(".button-group").style.display = "none";
-        successMessage.classList.add("active");
-    }
-
-    $.ajax(settings)
-        .done(function (response) {
-            console.log("Estimate submitted successfully:", response);
-            completeEstimateSubmission();
-        })
-        .fail(function (xhr, status, error) {
-            if (xhr.status === 0) {
-                console.info("Estimate request was sent; response was blocked by CORS.");
-                completeEstimateSubmission();
+        nextBtn.addEventListener("click", () => {
+            if (!validateStep()) {
                 return;
             }
 
-            console.warn("Estimate submission failed:", status, error);
+            if (currentStep < totalSteps) {
+                currentStep++;
+                updateProgress();
+                return;
+            }
 
-            hasSubmitted = false;
-            nextBtn.disabled = false;
-            prevBtn.disabled = false;
-            nextBtn.textContent = "Submit";
+            if (hasSubmitted) {
+                return;
+            }
 
-            errorMessage.textContent =
-                "Unable to submit your estimate. Please try again.";
-            errorMessage.classList.add("active");
+            hasSubmitted = true;
+            nextBtn.disabled = true;
+            prevBtn.disabled = true;
+            nextBtn.textContent = "Submitting...";
+
+            const formData = collectFormData();
+            console.log("Form submitted:", formData);
+
+            const emailBody = buildEstimateEmailBody();
+
+            const settings = {
+                url:
+                    "https://api.juaninfotech.com/api/User/SendCookscapeEmail" +
+                    "?Name=" +
+                    encodeURIComponent($("#estimatefullName").val()) +
+                    "&Email=" +
+                    encodeURIComponent($("#estimateemailid").val()) +
+                    "&Mobile=" +
+                    encodeURIComponent($("#estimatephonenumber").val()) +
+                    "&Subject=" +
+                    encodeURIComponent("Quick Estimate Lead") +
+                    "&Message=" +
+                    encodeURIComponent(emailBody),
+                method: "POST",
+                timeout: 30000
+            };
+
+            function completeEstimateSubmission() {
+                form.style.display = "none";
+                document.querySelector(".progress-container").style.display = "none";
+                document.querySelector(".button-group").style.display = "none";
+                successMessage.classList.add("active");
+            }
+
+            $.ajax(settings)
+                .done(function (response) {
+                    console.log("Estimate submitted successfully:", response);
+                    if (typeof window.fbq === "function") {
+                        window.cookscapeAllowLeadPixel = true;
+                        window.fbq("track", "Lead", {
+                            content_name: "Quick Estimate Form",
+                            content_category: "Free Estimate"
+                        });
+                        window.cookscapeAllowLeadPixel = false;
+                    }
+                    completeEstimateSubmission();
+                })
+                .fail(function (xhr, status, error) {
+                    console.warn("Estimate submission failed:", status, error);
+
+                    hasSubmitted = false;
+                    nextBtn.disabled = false;
+                    prevBtn.disabled = false;
+                    nextBtn.textContent = "Submit";
+
+                    errorMessage.textContent =
+                        "Unable to submit your estimate. Please try again.";
+                    errorMessage.classList.add("active");
+                });
         });
-});
 
         prevBtn.addEventListener('click', () => {
             if (currentStep > 1) {
@@ -1616,7 +1648,7 @@ nextBtn.addEventListener("click", () => {
 
 
 
-        //Contact Form Validation
+        //contact.html Form Validation
         if ($('#contact-form').length) {
             $('#contact-form').validate({
                 rules: {
@@ -1689,3 +1721,12 @@ nextBtn.addEventListener("click", () => {
         });
     }
 })(window.jQuery);
+
+
+
+
+
+
+
+
+
