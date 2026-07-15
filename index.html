@@ -127,11 +127,25 @@
         }
       }
     </script>
-
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('set', 'autoConfig', false, '1709974890272961');
+fbq('init', '1709974890272961');
+fbq('track', 'PageView');
+</script>
   </head>
 
   <body>
-
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1709974890272961&ev=PageView&noscript=1"
+/></noscript>
     <div class="page-wrapper">
       <!-- Preloader Start -->
       <div class="preloader interior">
@@ -1494,8 +1508,10 @@
           </div>
 
           <div style="margin-top: 45px">
-            <button
+            <div
               id="btnSubmitConsoltation"
+              role="button"
+              tabindex="0"
               style="
                 width: 100%;
                 margin-top: 12px;
@@ -1505,10 +1521,13 @@
                 border: none;
                 border-radius: 10px;
                 font-size: 16px;
+                text-align: center;
+                cursor: pointer;
+                user-select: none;
               "
             >
               GET FREE HOME INTERIOR CONSULTATION
-            </button>
+            </div>
           </div>
         </div>
       </section>
@@ -1864,7 +1883,7 @@
     <script src="/assets/js/jquery-ui.js"></script>
     <script src="/assets/js/element-in-view.js"></script>
     <script src="/assets/js/color-settings.js"></script>
-    <script src="/assets/js/script.js?v=9"></script>
+    <script src="/assets/js/script.js?v=10"></script>
 
     <!--[if lt IE 9
       ]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script
