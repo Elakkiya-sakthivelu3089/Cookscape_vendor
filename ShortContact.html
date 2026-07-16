@@ -145,8 +145,27 @@
           ><a href="/privacy-policy">Privacy Policy</a></span
         >
       </p>
-
-      <div
+      <button
+        id="btnSubmitShortContact"
+        type="button"
+        style="
+          width: 100%;
+          margin-top: 12px;
+          padding: 14px;
+          background: #e11d48;
+          color: white;
+          border: none;
+          border-radius: 10px;
+          font-size: 16px;
+          text-align: center;
+          cursor: pointer;
+          user-select: none;
+        "
+        tabindex="0"
+      >
+        UNLOCK MY OFFER
+      </button>
+      <!-- <div
         id="btnSubmitShortContact"
         role="button"
         tabindex="0"
@@ -165,12 +184,78 @@
         "
       >
         UNLOCK MY OFFER
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
 
 <script>
+  function sendShortContactLead(name, email, mobile) {
+    var settings = {
+      url: "https://api.juaninfotech.com/api/User/SendCookscapeEmail?Name=" +
+        encodeURIComponent(name) +
+        "&Email=" +
+        encodeURIComponent(email) +
+        "&Mobile=" +
+        encodeURIComponent(mobile) +
+        "&Subject=" +
+        encodeURIComponent("Short Contact Popup") +
+        "&Message=" +
+        encodeURIComponent("Short contact form submission from the website."),
+      method: "POST",
+      timeout: 30000
+    };
+
+    $.ajax(settings)
+      .done(function (response) {
+        console.log("Short contact submitted successfully:", response);
+        localStorage.setItem("cookscapePopupSubmitted", Date.now());
+        if (typeof window.trackCookscapeLead === "function") {
+          window.trackCookscapeLead("Short Contact Popup");
+        }
+        document.getElementById("cookscapePopupOverlay").style.display = "none";
+      })
+      .fail(function (xhr, status, error) {
+        console.warn("Short contact submission failed:", status, error);
+        showErr('#shortcontactEmail', '#errEmail', 'Unable to submit right now. Please try again.');
+      });
+  }
+
+  $(document).on('click', '#btnSubmitShortContact', function () {
+    let name = $('#shortcontactName').val().trim();
+    let mobile = $('#shortcontactMobile').val().trim();
+    let email = $('#shortcontactEmail').val().trim();
+
+    let valid = true;
+
+    $('.error').text('');
+    $('input').css('border', '1px solid #ddd');
+
+    if (!/^[A-Za-z ]{3,}$/.test(name)) {
+      showErr('#shortcontactName', '#errName', 'Enter a valid name (min 3 letters)');
+      valid = false;
+    }
+
+    if (!/^[6-9][0-9]{9}$/.test(mobile)) {
+      showErr('#shortcontactMobile', '#errMobile', 'Enter valid 10 digit mobile number');
+      valid = false;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
+      showErr('#shortcontactEmail', '#errEmail', 'Enter a valid email address');
+      valid = false;
+    }
+
+    if (!valid) return;
+
+    sendShortContactLead(name, email, mobile);
+  });
+
+  function showErr(input, err, msg) {
+    $(input).css('border', '1px solid #e11d48').focus();
+    $(err).text(msg);
+  }
+
   function showCookscapePopup() {
     if (hasSubmittedToday()) return;
     document.getElementById("cookscapePopupOverlay").style.display = "block";

@@ -68,7 +68,7 @@
         return lastDate.toDateString() === now.toDateString();
     }
 
-    function trackCookscapeLead(source) {
+    window.trackCookscapeLead = function (source) {
         if (typeof window.fbq !== "function") {
             return;
         }
@@ -79,7 +79,7 @@
             content_category: "Lead Generation"
         });
         window.cookscapeAllowLeadPixel = false;
-    }
+    };
 
     function sendEmail(name, email, phone_number, msg_subject, message) {
         var settings = {
@@ -149,7 +149,14 @@
             .done(function (response) {
                 console.log("Short contact submitted successfully:", response);
                 localStorage.setItem("cookscapePopupSubmitted", Date.now());
-                trackCookscapeLead("Short Contact Popup");
+                if (typeof window.fbq === "function") {
+                    window.cookscapeAllowLeadPixel = true;
+                    window.fbq("track", "Lead", {
+                        content_name: "Short Contact Popup",
+                        content_category: "Lead Generation"
+                    });
+                    window.cookscapeAllowLeadPixel = false;
+                }
                 var overlay = document.getElementById("cookscapePopupOverlay");
                 if (overlay) overlay.style.display = "none";
             })
@@ -224,7 +231,14 @@
             $.ajax(settings)
                 .done(function (response) {
                     console.log(response);
-                    trackCookscapeLead("Contact Form");
+                    if (typeof window.fbq === "function") {
+                        window.cookscapeAllowLeadPixel = true;
+                        window.fbq("track", "Lead", {
+                            content_name: "Contact Form",
+                            content_category: "Lead Generation"
+                        });
+                        window.cookscapeAllowLeadPixel = false;
+                    }
                 })
                 .fail(function (xhr, status, error) {
                     console.warn("Contact form submission failed:", status, error);
